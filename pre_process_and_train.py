@@ -120,7 +120,7 @@ def main():
     engine = create_engine('sqlite:///sentiment_analysis_db.sqlite')
 
     # Load data
-    df_reviews = load_data('amazon_reviews_data.json')
+    df_reviews = load_data('amazon_reviews_data_raw.json')
 
     # Preprocess reviews
     df_reviews['processed_reviewText'] = preprocess_texts(df_reviews['reviewText'])

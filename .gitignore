@@ -161,7 +161,7 @@ cython_debug/
 
 
 # Training data
-amazon_reviews_data.json
+amazon_reviews_data_raw.json
 
 # Vscode settings
 .vscode/
