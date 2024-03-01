@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from datetime import datetime
 
+# To convert this script to exe: pyinstaller --onefile --icon=app_icon.ico --windowed tkinter_app.py
+
 model_path = 'random_forest_model.joblib'
 database_path = 'sentiment_analysis_db.sqlite'
 
