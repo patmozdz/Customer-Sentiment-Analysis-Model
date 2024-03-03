@@ -9,9 +9,6 @@ import joblib
 from sqlalchemy import create_engine, Table, MetaData, Column, String, DateTime, Integer, Float
 from datetime import datetime
 
-# Initialize spaCy
-nlp = spacy.load("en_core_web_sm")
-
 
 # Load JSON data into a pandas DataFrame
 def load_data(filename):
@@ -173,4 +170,6 @@ def main():
 
 
 if __name__ == "__main__":
+    # Initialize spaCy
+    nlp = spacy.load("en_core_web_sm")
     main()
