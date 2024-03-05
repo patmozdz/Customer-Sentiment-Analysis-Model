@@ -1,0 +1,16 @@
+Quick-Start Guide for Sentiment Analysis Tool
+
+Step 1: Install 7-Zip
+•	Download and install 7-Zip from the official website to extract the necessary files.
+
+Step 2: Extract Required Files
+•	After installing 7-Zip, download the required_files.7z archive from OneDrive by using the following link:
+    https://1drv.ms/u/s!Alk5bi7fNqbxlTHf-b3Tq9sMGoP4?e=ORIb4x
+    Then, choose the option to extract its contents using 7-Zip. (Right click -> 7-Zip -> Extract Here)
+
+Step 3: Launch the Application
+•	Navigate to the extracted folder and double-click on the executable file named tkinter_app.exe to start the sentiment analysis application. It may take some time to launch; please be patient. Ignore the command prompt window, it’s only for logging purposes.
+
+Using the Application
+•	To analyze a review, type or paste a product review into the text box and click "Analyze Review". The application will classify the review as positive or negative and save the result in the database.
+•	To view metrics and statistics, utilize the buttons "Show Model Metrics", "Show Prediction Statistics", and "Show Failure Statistics" to display various graphical insights related to model performance and prediction outcomes.
