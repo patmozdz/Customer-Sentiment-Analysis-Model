@@ -166,3 +166,9 @@ amazon_reviews_data_raw.json
 # Vscode settings
 .vscode/
 
+# Ignore files included in required_files.7z:
+random_forest_model.joblib
+required_files.7z
+sentiment_analysis_db.sqlite
+tkinter_app.exe
+vectorizer.joblib
