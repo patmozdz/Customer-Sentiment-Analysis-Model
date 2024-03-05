@@ -1,3 +1,5 @@
+import sys
+import os
 import pandas as pd
 import spacy
 from sklearn.feature_extraction.text import CountVectorizer
@@ -8,6 +10,19 @@ from tqdm.auto import tqdm
 import joblib
 from sqlalchemy import create_engine, Table, MetaData, Column, String, DateTime, Integer, Float
 from datetime import datetime
+
+# Determine if we're running as a script or frozen exe
+if getattr(sys, 'frozen', False):
+    # If the app is frozen, use the directory of the executable
+    application_path = os.path.dirname(sys.executable)
+else:
+    # Otherwise, use the directory of the script
+    application_path = os.path.dirname(os.path.abspath(__file__))
+
+# The path to the spaCy model will be relative to the application_path
+spacy_path = os.path.join(application_path, 'en_core_web_sm_model')
+
+nlp = spacy.load(spacy_path)
 
 
 # Load JSON data into a pandas DataFrame
@@ -170,6 +185,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # Initialize spaCy
-    nlp = spacy.load("en_core_web_sm")
     main()

@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import tkinter as tk
 from tkinter import ttk
@@ -10,10 +11,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from datetime import datetime
 
-# To convert this script to exe: pyinstaller --onefile --icon=app_icon.ico --windowed tkinter_app.py
+# To convert this script to exe: pyinstaller --onefile --icon=app_icon.ico tkinter_app.py
 
-model_path = 'random_forest_model.joblib'
-database_path = 'sentiment_analysis_db.sqlite'
+# Determine if we're running as a script or frozen exe (pyinstaller)
+if getattr(sys, 'frozen', False):
+    application_path = os.path.dirname(sys.executable)
+elif __file__:
+    application_path = os.path.dirname(__file__)
+
+model_path = os.path.join(application_path, 'random_forest_model.joblib')
+database_path = os.path.join(application_path, 'sentiment_analysis_db.sqlite')
 
 
 # Check and setup database if needed
